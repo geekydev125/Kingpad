@@ -8,25 +8,35 @@ import TwitterSvg from '../assets/icon/icon-twitter.svg';
 
 export const ComingSoon = () => {
   return (
-    <Container>
-      <KingpadLogo src={KingPadSvg} alt="king-pad-logo" />
-      <KingpadVisual src={DeskKingpadVisualSvg} className="sm:block hidden" />
-      <KingpadVisual src={MobKingpadVisualSvg} className="sm:hidden block" />
-      <ButtonGroup>
-        <SocialLeftBtn>
-          <Img src={TelegramSvg} alt="telegra-svg" />
-        </SocialLeftBtn>
-        <SocialRightBtn>
-          <Img src={TwitterSvg} alt="telegra-svg" />
-        </SocialRightBtn>
-      </ButtonGroup>
-      <PoweredBy>
-        <SmallText>Powered by</SmallText>
-        <KingLogo src={KingLogoSvg} alt="king-logo" />
-      </PoweredBy>
-    </Container>
+    <Wrapper>
+      <Container>
+        <KingpadLogo src={KingPadSvg} alt="king-pad-logo" />
+        <KingpadVisual src={DeskKingpadVisualSvg} className="sm:block hidden" />
+        <KingpadVisual src={MobKingpadVisualSvg} className="sm:hidden block w-[480px]" />
+        <ButtonGroup>
+          <SocialLeftBtn>
+            <Img src={TelegramSvg} alt="telegra-svg" />
+          </SocialLeftBtn>
+          <SocialRightBtn>
+            <Img src={TwitterSvg} alt="telegra-svg" />
+          </SocialRightBtn>
+        </ButtonGroup>
+        <PoweredBy>
+          <SmallText>Powered by</SmallText>
+          <KingLogo src={KingLogoSvg} alt="king-logo" />
+        </PoweredBy>
+      </Container>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +47,7 @@ const Container = styled.div`
 const KingpadLogo = styled.img`
   width: 110px;
   height: auto;
-  padding-top: 4rem;
+  padding-top: 2rem;
 `;
 
 const KingpadVisual = styled.img`
@@ -49,10 +59,13 @@ const KingpadVisual = styled.img`
 const ButtonGroup = styled.div`
   background: #171717 0% 0% no-repeat padding-box;
   border-radius: 31px;
-  height: 50px;
+  height: 60px;
   width: 120px;
   display: flex;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  @media screen and (max-width: 640px) {
+    height: 40px;
+  }
 `;
 
 const Img = styled.img`
@@ -61,7 +74,7 @@ const Img = styled.img`
 `;
 
 const SocialBtn = css`
-  height: 50px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -70,6 +83,9 @@ const SocialBtn = css`
   transition: all linear 0.3s;
   &:hover {
     background-color: rgb(34, 33, 33);
+  }
+  @media screen and (max-width: 640px) {
+    height: 40px;
   }
 `;
 
