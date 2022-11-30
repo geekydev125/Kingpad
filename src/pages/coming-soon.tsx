@@ -47,7 +47,6 @@ const Container = styled.div`
 const KingpadLogo = styled.img`
   width: 110px;
   height: auto;
-  padding-top: 2rem;
 `;
 
 const KingpadVisual = styled.img`
