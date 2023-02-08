@@ -25,7 +25,7 @@ export const ComingSoon = () => {
         </ButtonGroup>
         <PoweredBy>
           <SmallText>Powered by</SmallText>
-          <a href={'https://king-finance.vercel.app'} rel="noopener noreferrer">
+          <a href={'https://kingworld.finance'} rel="noopener noreferrer" target="_blank">
             <KingLogo src={KingLogoSvg} alt="king-logo" />
           </a>
         </PoweredBy>
