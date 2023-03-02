@@ -1,11 +1,14 @@
 import styled, { css } from 'styled-components';
-import KingPadSvg from '../assets/svg/kingpad.svg';
-import KingLogoSvg from '../assets/svg/footerlogo.svg';
-import DeskKingpadVisualSvg from '../assets/png/kingpad-visual.png';
-import MobKingpadVisualSvg from '../assets/png/kingpad-visual-mobile.png';
-import TelegramSvg from '../assets/icon/icon-telegram.svg';
-import TwitterSvg from '../assets/icon/icon-twitter.svg';
+
 import { useNavigate } from 'react-router-dom';
+import {
+  DeskKingpadVisualSvg,
+  GitBookSvg,
+  KingLogoSvg,
+  KingPadSvg,
+  MobKingpadVisualSvg,
+  TelegramSvg
+} from 'src/config/images';
 
 export const ComingSoon = () => {
   const navigate = useNavigate();
@@ -16,11 +19,15 @@ export const ComingSoon = () => {
         <KingpadVisual src={DeskKingpadVisualSvg} className="sm:block hidden" />
         <KingpadVisual src={MobKingpadVisualSvg} className="sm:hidden block w-[480px]" />
         <ButtonGroup>
-          <SocialLeftBtn href={'https://t.me/KlNGfinance'} rel="noopener noreferrer">
+          <SocialLeftBtn href={'https://t.me/KlNGfinance'} rel="noopener noreferrer" target={'_blank'}>
             <Img src={TelegramSvg} alt="telegram-svg" />
           </SocialLeftBtn>
-          <SocialRightBtn href={'https://twitter.com/kingfinance'} rel="noopener noreferrer">
-            <Img src={TwitterSvg} alt="twitter-svg" />
+          <SocialRightBtn
+            href={'https://king-finance.gitbook.io/king-whitepaper/king-ecosystem/king-pad'}
+            rel="noopener noreferrer"
+            target={'_blank'}
+          >
+            <Img src={GitBookSvg} alt="twitter-svg" />
           </SocialRightBtn>
         </ButtonGroup>
         <PoweredBy>
