@@ -7,7 +7,8 @@ import {
   KingLogoSvg,
   KingPadSvg,
   MobKingpadVisualSvg,
-  TelegramSvg
+  TelegramSvg,
+  TwitterSvg
 } from 'src/config/images';
 
 export const ComingSoon = () => {
@@ -22,12 +23,15 @@ export const ComingSoon = () => {
           <SocialLeftBtn href={'https://t.me/KlNGfinance'} rel="noopener noreferrer" target={'_blank'}>
             <Img src={TelegramSvg} alt="telegram-svg" />
           </SocialLeftBtn>
-          <SocialRightBtn
+          <SocialMiddleBtn
             href={'https://king-finance.gitbook.io/king-whitepaper/king-ecosystem/king-pad'}
             rel="noopener noreferrer"
             target={'_blank'}
           >
-            <Img src={GitBookSvg} alt="twitter-svg" />
+            <Img src={GitBookSvg} alt="gitbook-svg" />
+          </SocialMiddleBtn>
+          <SocialRightBtn href={'https://twitter.com/kingfinance'} rel="noopener noreferrer" target={'_blank'}>
+            <Img src={TwitterSvg} alt="twitter-svg" />
           </SocialRightBtn>
         </ButtonGroup>
         <PoweredBy>
@@ -72,7 +76,7 @@ const ButtonGroup = styled.div`
   background: #171717 0% 0% no-repeat padding-box;
   border-radius: 31px;
   height: 60px;
-  width: 120px;
+  width: 180px;
   display: flex;
   margin-top: 0.5rem;
   @media screen and (max-width: 640px) {
@@ -124,4 +128,8 @@ const SmallText = styled.div`
 const KingLogo = styled.img`
   width: 80px;
   height: 80px;
+`;
+
+const SocialMiddleBtn = styled.a`
+  ${SocialBtn}
 `;
